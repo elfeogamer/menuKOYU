@@ -4,38 +4,67 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Menú</title>
+
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  background: #111;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
-.container {
+
+.card {
+  background: #fff;
   width: 90%;
-  max-width: 400px;
+  max-width: 380px;
+  border-radius: 25px;
+  padding: 25px 20px;
   text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
 }
+
+.logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #ff5a00;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 h1 {
-  margin-bottom: 25px;
+  margin: 10px 0 25px;
+  font-size: 22px;
+  color: #111;
 }
-a {
+
+.menu-btn {
   display: block;
-  padding: 18px;
+  padding: 16px;
   margin: 15px 0;
-  background: #ffcc00;
-  color: #000;
+  background: #ff5a00;
+  color: #fff;
   text-decoration: none;
-  font-size: 20px;
-  border-radius: 12px;
+  font-size: 18px;
+  border-radius: 15px;
   font-weight: bold;
+  transition: transform .1s ease, box-shadow .1s ease;
 }
-a:hover {
-  background: #ffb700;
+
+.menu-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(255,90,0,.5);
 }
+
 .footer {
   margin-top: 20px;
   font-size: 12px;
@@ -43,19 +72,26 @@ a:hover {
 }
 </style>
 </head>
+
 <body>
 
-<div class="container">
-  <h1>📋 Nuestro Menú</h1>
+<div class="card">
+
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+  </div>
+
+  <h1>Nuestro Menú</h1>
 
   <!-- LINKS A TUS PDFs -->
-  <a href="menu-comidas.pdf" target="_blank">🍔 Comidas</a>
-  <a href="menu-bebidas.pdf" target="_blank">🥤 Bebidas</a>
-  <a href="menu-postres.pdf" target="_blank">🍰 Postres</a>
+  <a class="menu-btn" href="menu-comidas.pdf" target="_blank">🍔 Comidas</a>
+  <a class="menu-btn" href="menu-bebidas.pdf" target="_blank">🥤 Bebidas</a>
+  <a class="menu-btn" href="menu-postres.pdf" target="_blank">🍰 Postres</a>
 
   <div class="footer">
-    Escanea y elige tu menú
+    Escanea el QR y elige tu menú
   </div>
+
 </div>
 
 </body>
